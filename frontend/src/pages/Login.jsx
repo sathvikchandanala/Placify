@@ -29,13 +29,12 @@ const Login = () => {
   };
 
   useEffect(() => {
+    if (isAuthenticated) {
+      navigateTo("/");
+    }
     if (error) {
       toast.error(error); 
       dispatch(clearAllUserErrors()); 
-    }
-
-    if (isAuthenticated) {
-      navigateTo("/");
     }
   }, [error, isAuthenticated, dispatch, navigateTo]);
   return (

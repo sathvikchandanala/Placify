@@ -94,7 +94,7 @@ const Register = () => {
           <div className="header">
             <h3>Create a new account</h3>
           </div>
-          <form onSubmit={handleRegsiter}>
+          <form onSubmit={()=>handleRegsiter}>
             <div className="wrapper">
               <div className="inputTag">
                 <label>Register As</label>
